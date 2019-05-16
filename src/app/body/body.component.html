@@ -1,0 +1,9 @@
+<div>
+  <input #tableFor>
+  <button (click)="addNewDiv(tableFor.value)">Add</button>
+</div>
+<div id="areaDiv" class="boundary" fxLayout="row" >
+  <div  *ngFor="let i of tableArray" [ngClass]="'table-for-'+i" cdkDragBoundary=".boundary" cdkDrag>
+    table-for-{{i}}
+  </div>
+</div>
